@@ -1,0 +1,35 @@
+{% extends "webapp/header.html" %}
+{% block content %}
+<form method="POST" class="post-form">{% csrf_token %}
+    <!-- {{ form.as_p }} -->
+    <div class="row m-2">
+        <div class="col-md-2">
+            <label for="your_name">Your name: </label>
+        </div>
+        <div class="col-md-6">
+            <input id="id_name" class="form-control" type="text" name="name">
+        </div>
+    </div>
+    <div class="row m-2">
+            <div class="col-md-2">
+                <label for="your_name">Your Query: </label>
+            </div>
+            <div class="col-md-6">
+                <textarea id="id_query" class="form-control" type="text" name="query"></textarea>
+            </div>
+        </div>
+        <div class="row m-2">
+                <div class="col-md-2">
+                    <label for="contact">Your Email or Phone: </label>
+                </div>
+                <div class="col-md-6">
+                    <input id="id_contact" class="form-control" type="text" name="contact">
+                </div>
+            </div>
+    <div class="row">
+        <div class="col-md-8 modal-footer">
+            <input class="save btn btn-primary" type="submit" value="Submit">
+        </div>
+    </div>
+</form>
+{% endblock %}
